@@ -7,8 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div id="wrapper">
+	<div id="header">
+		<strogn>動画保管</strogn>
+	</div id="content">
+		<%= yield %>
+	<div>
+</div>
 
-<%= yield %>
+
 
 </body>
 </html>

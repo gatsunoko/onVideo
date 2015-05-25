@@ -1,0 +1,17 @@
+
+<%= form_for @article do |f| %>
+	<% if @article.errors.any? %>
+		<%= @article.errors.count %>個のエラーがあります<br>
+		<% @article.errors.full_messages.each do |msg| %>
+			<%= msg %><br>
+		<% end %>
+	<% end %>
+
+	<p>タイトル</p>
+	<%= f.text_field :title %><br>
+	<p>動画URL</p>
+	<%= f.text_field :videourl %><br>
+	<p>本文</p>
+	<%= f.text_area :text %><br>
+	<%= f.submit %>
+<% end %>

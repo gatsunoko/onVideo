@@ -1,3 +1,19 @@
 // Place all the styles related to the articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#title{
+	padding: 10px;
+	margin: 10px 0 0 0;
+}
+#text{
+	margin: 0;
+}
+#article_text{
+	height:400px;
+	width: 400px
+}
+iframe{
+	width: 600px;
+	height: 337px;
+}
