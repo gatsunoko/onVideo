@@ -1,6 +1,16 @@
-<h1>記事一覧</h1>
+<h1>動画一覧</h1>
 <%#= image_tag "logo.jpg", width: 400 %><br>
-<%= link_to "新規記事作成", new_article_path %>
+<%= link_to "新規動画登録", new_article_path %>
+
+<%= form_tag action: :ph1 do %>
+  <div class="field">
+    <%= label_tag :title, '動画タイトル：'  %><br />
+    <%= text_field_tag :title %>
+  </div>
+  <%= submit_tag '検索' %>
+<% end %>
+<%= link_to "動画一覧へ戻る", articles_path %>
+
 <% @articles.each do |article| %>
 	<h2 id="title"><%= link_to article.title, article_path(article) %></h2><br>
 	<p id="text"><%= article.text %></p><br>
